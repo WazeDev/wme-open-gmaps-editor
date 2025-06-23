@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         WME Open GMaps Editor
 // @namespace    https://github.com/WazeDev/wme-open-gmaps-editor
-// @version      0.0.1
-// @description  Replaces Google logo link in the bottom right corner with the Google Maps Editor link.
+// @version      0.0.2
+// @description  Opens the Google Maps editor based on WME's map center.
 // @author       Gavin Canon-Phratsachack (https://github.com/gncnpk)
 // @match        https://beta.waze.com/*editor*
 // @match        https://www.waze.com/*editor*
@@ -47,6 +47,7 @@
             scriptName: 'WME Open GMaps Editor'
         })
         wmeSdk.Events.on({eventHandler: replaceGoogleLink, eventName: "wme-map-move-end"})
+        wmeSdk.Events.on({eventHandler: replaceGoogleLink, eventName: "wme-map-zoom-changed"})
         replaceGoogleLink();
      }
     function replaceGoogleLink() {
@@ -55,4 +56,5 @@
         let url = `https://www.google.com/maps/place/@${coords.lat},${coords.lon},${zoomLevels[mapZoom]}m/data=!10m2!1e3!2e14`
         document.getElementsByClassName("wz-map-ol-control-google-map-permalink")[0].children[0].href = url;
     }
+    // Your code here...
 })();
