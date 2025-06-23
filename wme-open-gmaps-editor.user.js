@@ -56,5 +56,4 @@
         let url = `https://www.google.com/maps/place/@${coords.lat},${coords.lon},${zoomLevels[mapZoom]}m/data=!10m2!1e3!2e14`
         document.getElementsByClassName("wz-map-ol-control-google-map-permalink")[0].children[0].href = url;
     }
-    // Your code here...
 })();
