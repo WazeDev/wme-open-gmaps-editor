@@ -2,7 +2,7 @@
 // @name         WME Open GMaps Editor
 // @namespace    https://github.com/WazeDev/wme-open-gmaps-editor
 // @version      0.0.1
-// @description  Opens the Google Maps editor based on WME's map center.
+// @description  Replaces Google logo link in the bottom right corner with the Google Maps Editor link.
 // @author       Gavin Canon-Phratsachack (https://github.com/gncnpk)
 // @match        https://beta.waze.com/*editor*
 // @match        https://www.waze.com/*editor*
