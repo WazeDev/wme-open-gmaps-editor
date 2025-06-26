@@ -10,6 +10,7 @@
 // @exclude      https://www.waze.com/discuss/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=waze.com
 // @license      MIT
+// @contributionURL https://github.com/WazeDev/Thank-The-Authors
 // @grant        none
 // @downloadURL https://update.greasyfork.org/scripts/540549/WME%20Open%20GMaps%20Editor.user.js
 // @updateURL https://update.greasyfork.org/scripts/540549/WME%20Open%20GMaps%20Editor.meta.js
