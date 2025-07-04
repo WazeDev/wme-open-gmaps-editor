@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WME Open GMaps Editor
 // @namespace    https://github.com/WazeDev/wme-open-gmaps-editor
-// @version      0.0.4
+// @version      0.0.5
 // @description  Opens the Google Maps editor based on WME's map center.
 // @author       Gavin Canon-Phratsachack (https://github.com/gncnpk)
 // @match        https://beta.waze.com/*editor*
@@ -15,6 +15,9 @@
 // @downloadURL https://update.greasyfork.org/scripts/540549/WME%20Open%20GMaps%20Editor.user.js
 // @updateURL https://update.greasyfork.org/scripts/540549/WME%20Open%20GMaps%20Editor.meta.js
 // ==/UserScript==
+
+// Terms
+// DO = Data Option
 
 (function() {
     'use strict';
@@ -96,7 +99,10 @@
     function replaceGoogleLink() {
         const coords = wmeSdk.Map.getMapCenter();
         const mapZoom = wmeSdk.Map.getZoomLevel();
-        let url = `https://www.google.com/maps/place/@${coords.lat},${coords.lon},${zoomLevels[mapZoom]}m/data=!10m2!1e3!2e14!5m1!1e1`
+        const trafficMapLayer_DO = "!5m1!1e1"
+        const mapAddPlaceDialog_DO = "!10m1!1e2"
+        const mapFixDialog_DO = "!10m1!1e3"
+        let url = `https://www.google.com/maps/place/@${coords.lat},${coords.lon},${zoomLevels[mapZoom]}m/data=${trafficMapLayer_DO}${mapFixDialog_DO}`
         document.getElementById("wme-open-gmaps-editor-url").href = url;
     }
 })();
