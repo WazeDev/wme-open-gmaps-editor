@@ -128,7 +128,7 @@
             // Encode the dimensions message (field 1.3)
             const dimensionsMessage = concatUint8Arrays(
                 encodeFieldHeader(1, VARINT), encodeVarint(1920),
-                encodeFieldHeader(2, VARINT), encodeVarint(1080)
+                encodeFieldHeader(2, VARINT), encodeVarint(957)
             );
 
             // Encode the main nested message (field 1)
